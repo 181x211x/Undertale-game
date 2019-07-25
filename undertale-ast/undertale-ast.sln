@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio for Mac
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "undertale-ast", "Assembly-CSharp-firstpass.csproj", "{262911EC-0088-6A10-3FCA-7550BA54B800}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "undertale-ast", "Assembly-CSharp.csproj", "{B6E4ED8A-CB4F-879A-3778-21976E8F28AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{262911EC-0088-6A10-3FCA-7550BA54B800}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{262911EC-0088-6A10-3FCA-7550BA54B800}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{262911EC-0088-6A10-3FCA-7550BA54B800}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{262911EC-0088-6A10-3FCA-7550BA54B800}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6E4ED8A-CB4F-879A-3778-21976E8F28AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6E4ED8A-CB4F-879A-3778-21976E8F28AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6E4ED8A-CB4F-879A-3778-21976E8F28AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6E4ED8A-CB4F-879A-3778-21976E8F28AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
