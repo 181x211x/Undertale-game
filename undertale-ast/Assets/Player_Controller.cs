@@ -14,7 +14,6 @@ public class Player_Controller : MonoBehaviour {
     public static bool player_damaged = false;
 
 
-    public Rigidbody2D rg;
 
     // Use this for initialization
     void Start () {

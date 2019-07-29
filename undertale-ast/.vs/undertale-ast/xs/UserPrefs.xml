@@ -1,17 +1,20 @@
 ﻿<Properties StartupConfiguration="{B6E4ED8A-CB4F-879A-3778-21976E8F28AE}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/knife_attack5.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/player_move.cs">
     <Files>
-      <File FileName="Assets/BattleController.cs" Line="728" Column="44" />
+      <File FileName="Assets/BattleController.cs" Line="358" Column="1" />
       <File FileName="Assets/TextController.cs" Line="37" Column="15" />
-      <File FileName="Assets/Player_Controller.cs" Line="49" Column="11" />
+      <File FileName="Assets/Player_Controller.cs" Line="17" Column="1" />
       <File FileName="Assets/Knife_attack.cs" Line="1" Column="1" />
-      <File FileName="Assets/knife_attack2.cs" Line="8" Column="30" />
-      <File FileName="Assets/player_move.cs" Line="179" Column="24" />
+      <File FileName="Assets/knife_attack2.cs" Line="43" Column="51" />
+      <File FileName="Assets/player_move.cs" Line="155" Column="47" />
       <File FileName="Assets/knife_attack3.cs" Line="35" Column="10" />
-      <File FileName="Assets/knife_attack1.cs" Line="47" Column="5" />
-      <File FileName="Assets/stage_help.cs" Line="53" Column="24" />
-      <File FileName="Assets/knife_attack_4.cs" Line="73" Column="51" />
-      <File FileName="Assets/knife_attack5.cs" Line="4" Column="7" />
+      <File FileName="Assets/knife_attack1.cs" Line="47" Column="1" />
+      <File FileName="Assets/stage_help.cs" Line="53" Column="23" />
+      <File FileName="Assets/knife_attack_4.cs" Line="27" Column="49" />
+      <File FileName="Assets/knife_attack5.cs" Line="69" Column="1" />
+      <File FileName="Assets/Knife_attack6.cs" Line="57" Column="1" />
+      <File FileName="Assets/Knife_attack7.cs" Line="71" Column="31" />
+      <File FileName="Assets/seild_move.cs" Line="18" Column="12" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

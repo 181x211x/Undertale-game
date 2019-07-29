@@ -43,6 +43,11 @@ public class player_move : MonoBehaviour {
 
     private int jump_count = 0;
 
+
+    public GameObject seild;
+
+    private string orange_move = "d";
+
     // Use this for initialization
     void Start () {
 		
@@ -94,7 +99,7 @@ public class player_move : MonoBehaviour {
 
             transform.position = Position;
         }
-        else if (player_state.Equals("blue"))
+        else if (player_state.Equals("blue") || player_state.Equals("lightblue"))
         {
 
 
@@ -129,6 +134,78 @@ public class player_move : MonoBehaviour {
 
 
         }
+        else if (player_state.Equals("green"))
+        {
+
+            if (Input.GetKey(KeyCode.UpArrow))
+            {
+                seild.transform.Rotate(0, 0, -5f);
+            }
+
+            if (Input.GetKey(KeyCode.DownArrow))
+            {
+                seild.transform.Rotate(0, 0, 5f);
+            }
+
+            if (Input.GetKey(KeyCode.RightArrow))
+            {
+                seild.transform.Rotate(0, 0, -5f);
+            }
+
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                seild.transform.Rotate(0, 0, 5f);
+            }
+        }
+        else if (player_state.Equals("orange"))
+        {
+            Vector2 Position = transform.position;
+
+            if (Input.GetKey(KeyCode.UpArrow))
+            {
+                orange_move = "up";
+            }
+
+            if (Input.GetKey(KeyCode.DownArrow))
+            {
+                orange_move = "down";
+            }
+
+            if (Input.GetKey(KeyCode.RightArrow))
+            {
+                orange_move = "right";
+            }
+
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                orange_move = "left";
+            }
+
+
+            if (orange_move.Equals("up"))
+            { 
+                Position.y += 0.05f;
+                transform.position = Position;
+            }
+            else if (orange_move.Equals("down")){
+                Position.y -= 0.05f;
+                transform.position = Position;
+            }
+            else if (orange_move.Equals("right"))
+            {
+                Position.x += 0.05f;
+                transform.position = Position;
+            }
+            else if (orange_move.Equals("left"))
+            {
+                Position.x -= 0.05f;
+                transform.position = Position;
+            }
+
+
+
+        }
+
 
 
 

@@ -33,12 +33,14 @@ public class knife_attack2 : MonoBehaviour {
         else if (gameObject.transform.position.y > 1)
         {
             up = true;
+            gameObject.transform.Rotate(0, -180, 90);
 
 
         }
         else if (gameObject.transform.position.y < -3)
         {
             down = true;
+            gameObject.transform.Rotate(0, -180, 0);
 
 
         }

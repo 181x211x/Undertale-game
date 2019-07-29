@@ -24,7 +24,7 @@ public class knife_attack_4 : MonoBehaviour {
         else if (gameObject.transform.position.x > 5)
         {
             right = true;
-            gameObject.transform.Rotate(0, 0, -180);
+            gameObject.transform.Rotate(0, 0, 180);
         }
         else if (gameObject.transform.position.y > 1)
         {

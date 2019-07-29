@@ -44,6 +44,8 @@ public class BattleController : MonoBehaviour {
     public GameObject knife3;
     public GameObject knife4;
     public GameObject knife5;
+    public GameObject knife6;
+    public GameObject knife7;
 
     public GameObject stage_help;
 
@@ -341,7 +343,7 @@ public class BattleController : MonoBehaviour {
 
 
 
-            player_state = 1;
+            player_state = 4;
             Player[player_state].SetActive(true);
 
             player_move player_Move = Player[player_state].GetComponent<player_move>();
@@ -354,7 +356,7 @@ public class BattleController : MonoBehaviour {
             //Player[player_state].SetActive(false);
             //Boss_comment_obj.SetActive(false);
 
-            player_move.player_state = "blue";
+            player_move.player_state = "lightblue";
 
         }
 
@@ -393,7 +395,8 @@ public class BattleController : MonoBehaviour {
             {
                 //Knife_attack_blue1();
                 isKnife5_flag = true;   
-                Knife_attack_blue1();
+                //Knife_attack_blue1();
+                Knife_attack_blue2();
             }
 
 
@@ -810,6 +813,160 @@ public class BattleController : MonoBehaviour {
         fieldset_flag = true;
         iTween.ScaleBy(field, iTween.Hash("x", 0.4f, "time", 1f));
         fieldset_flag = false;
+
+
+    }
+
+
+
+    private void Knife_attack_blue2()
+    {
+
+        StartCoroutine("Knife_attack_blue_set2");
+        StartCoroutine("Knife_attack_blue_stage_help2");
+        StartCoroutine("Knife_attack_blue_3_1");
+        StartCoroutine("Knife_attack_blue_4");
+        StartCoroutine("Knife_attack_blue_5");
+        StartCoroutine("Knife_attack_blue_6");
+        StartCoroutine("Knife_attack_blue_7");
+
+    }
+
+
+    private IEnumerator Knife_attack_blue_set2()
+    {
+        fieldset_flag = true;
+        iTween.ScaleBy(field, iTween.Hash("x", 4.2f, "time", 1f));
+        //iTween.ScaleBy(field, iTween.Hash("y", 1.2f,"delay",1f));
+        fieldset_flag = false;
+        yield return new WaitForSeconds(0.8f);
+
+    }
+
+    private IEnumerator Knife_attack_blue_stage_help2()
+    {
+        if (isKnife5_flag)
+        {
+            yield return new WaitForSeconds(2.0f);
+            Stage_help2();
+        }
+
+    }
+
+    private void Stage_help2()
+    {
+        //Quaternion rote = Quaternion.Euler(0.0f, 0.0f, -90.0f);
+        defence_count++;
+
+        if(defence_count < 8)
+        {
+            stagehelp_copy[0] = Instantiate(stage_help, new Vector3(10.0f, -2.0f, 0.0f), Quaternion.identity);
+        }
+        else
+        {
+            stagehelp_copy[0] = Instantiate(stage_help, new Vector3(10.0f, -2.0f, 0.0f), Quaternion.identity);
+            iTween.ScaleBy(stagehelp_copy[0], iTween.Hash("x", 0.5f));
+        }
+
+        StartCoroutine("Knife_attack_blue_stage_help2");
+
+
+    }
+
+
+
+    private IEnumerator Knife_attack_blue_3_1()
+    {
+        yield return new WaitForSeconds(2.0f);
+        StartCoroutine("Knife_attack_blue_3");
+    }
+
+    private IEnumerator Knife_attack_blue_3()
+    {
+        if (isKnife5_flag)
+        {
+            yield return new WaitForSeconds(0.2f);
+            Knife_blue_3();
+
+        }
+
+
+    }
+
+    private void Knife_blue_3()
+    {
+        knife_blue1_copy[0] = Instantiate(knife4, new Vector3(9.0f, -2.8f, 0.0f), Quaternion.identity);
+        StartCoroutine("Knife_attack_blue_3");
+    }
+
+
+
+    private IEnumerator Knife_attack_blue_4()
+    {
+        if (isKnife5_flag)
+        {
+            yield return new WaitForSeconds(3.0f);
+            Knife_blue_4();
+
+        }
+
+
+    }
+
+    private void Knife_blue_4()
+    {
+        knife_blue1_copy[1] = Instantiate(knife6, new Vector3(10.0f, -0.2f, 0.0f), Quaternion.identity);
+        StartCoroutine("Knife_attack_blue_4");
+    }
+
+    private IEnumerator Knife_attack_blue_5()
+    {
+        if (isKnife5_flag)
+        {
+            yield return new WaitForSeconds(8.0f);
+            knife_blue1_copy[2] = Instantiate(knife7, new Vector3(10.0f, -1.5f, 0.0f), Quaternion.identity);
+
+        }
+
+
+    }
+
+    private IEnumerator Knife_attack_blue_6()
+    {
+        if (isKnife5_flag)
+        {
+            yield return new WaitForSeconds(15.0f);
+            knife_blue1_copy[3] = Instantiate(knife_orange, new Vector3(5.0f, 5.0f, 0.0f), Quaternion.identity);
+            iTween.ScaleBy(knife_blue1_copy[3], iTween.Hash("y", 2.5f));
+            knife_blue1_copy[4] = Instantiate(knife_orange, new Vector3(-5.0f, 5.0f, 0.0f), Quaternion.identity);
+            iTween.ScaleBy(knife_blue1_copy[4], iTween.Hash("y", 2.5f));
+
+        }
+
+
+    }
+
+    private IEnumerator Knife_attack_blue_7()
+    {
+        if (isKnife5_flag)
+        {
+            yield return new WaitForSeconds(20.0f);
+            Quaternion rote = Quaternion.Euler(0.0f, 0.0f, -90.0f);
+            knfe_copy[0] = Instantiate(knife, new Vector3(10.6f, -0.6f, 0.0f), rote);
+            yield return new WaitForSeconds(1.0f);
+            knfe_copy[0] = Instantiate(knife, new Vector3(10.6f, -1.6f, 0.0f), rote);
+            yield return new WaitForSeconds(1.0f);
+            knfe_copy[0] = Instantiate(knife, new Vector3(10.6f, -1.1f, 0.0f), rote);
+            yield return new WaitForSeconds(3.0f);
+            isKnife5_flag = false;
+            yield return new WaitForSeconds(12.0f);
+            defense_end_flag = true;
+            defence_count = 0;
+            Boss_comment_obj.SetActive(false);
+            fieldset_flag = true;
+            iTween.ScaleBy(field, iTween.Hash("x", 0.23809524f, "time", 1f));
+            fieldset_flag = false;
+        }
 
 
     }
